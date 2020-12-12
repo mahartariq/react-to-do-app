@@ -10,7 +10,7 @@ export const AddList = () => {
 
     const {EddList} = useContext(Context);
   //  console.log(Context);
-    console.log("addList function ",EddList);
+   // console.log("addList function ",EddList);
 
     const onSubmit = (e) => {
         e.preventDefault();

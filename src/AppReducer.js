@@ -7,6 +7,11 @@ const AppReducer = (state,action)=>{
                 ...state,
                 basic: [action.payload, ...state.basic]
             }
+        case "Dele":
+            return{
+                ...state,
+                basic: state.basic.filter(basi=>basi.id !== action.payload)
+            }
         default:
                 return state;
     }

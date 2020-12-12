@@ -3,10 +3,17 @@ import AppReducer from './AppReducer';
 
 const info = {basic:[]}
  const Context = createContext(info);
-
+//console.log(info.basic);
 const GlobalProvider = ({children}) =>{
     const[state,dispatch] = useReducer(AppReducer,info)
+ 
     
+  function Del(id){
+      dispatch({
+          type:"Dele",
+          payload:id
+      })
+  }  
  function EddList (infoo) {
         dispatch({
             type: 'Add',
@@ -15,7 +22,7 @@ const GlobalProvider = ({children}) =>{
     }
  //   console.log(addList);
     return(
-        <Context.Provider value={{basic:state.basic,EddList}}>
+        <Context.Provider value={{basic:state.basic,EddList,Del}}>
             {children}
         </Context.Provider>
     )

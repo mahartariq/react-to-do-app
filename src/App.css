@@ -18,8 +18,32 @@ input[type="text"]{
   outline: none;
 }
 
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 2px 5px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+li:hover .delete-btn {
+  opacity: 1;
+}
+
 button{
   margin-left: 3px;
   background-color: transparent;
   outline: none;
+}
+li:nth-child(odd){
+  border-left: 3px solid red;
+  margin-top: 1px;
+}
+li:nth-child(even){
+  border-left: 3px solid green;
+  margin-top: 1px;
 }
